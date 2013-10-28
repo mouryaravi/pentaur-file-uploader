@@ -6,6 +6,7 @@ exports.login = (req, res)->
 exports.logout = (req, res)->
   req.session.user = undefined
   req.logout()
+  res.locals.loggedInUser = undefined
   res.redirect '/'
 
 exports.checkLogin = (req, res)->
