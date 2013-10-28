@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= Videos
+  .jumbotron
+    .container
+      ul.list-group
+        if videos.length == 0
+          p.description No videos
+        else
+          each video, idx in videos
+            li.list-group-item
+              a(href="/videos/#{video}")= video
+
