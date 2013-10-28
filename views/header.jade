@@ -1,5 +1,8 @@
 ul.nav.nav-pills
-  li
-    a(href="/") Home
-  li
-    a(href="/videos") Videos
+  if loggedInUser
+    li
+      a(href="/") Home
+    li
+      a(href="/videos") Videos
+    li
+      a(href="/logout") Logout
